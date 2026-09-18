@@ -12,31 +12,32 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				Replace this with you answer
+				Vi kan bruke konstanter for verdier som aldri endres mens programmet kjører, mens variabler er for data som må oppdateres, spores eller beregnes dynamisk
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				Replace this with you answer
+				Parenteser overstyrer den vanlige regnerekkfølgen slik at tallene/beregningene inne dem tvinges til å kjøre først.
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				Replace this with you answer
+				Vi kan begrense flyttall til et bestemt antall desimaler ved hjelp av avrundings funkjsjoner som: Round, Rounddown, Roundup, Floor, INT og Ceiling.
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				Replace this with you answer
+				Vi kan sammenligner to flyttall ved å sjekke om den absolutte differansen mellom dem er mindre enn en toleranseverdi kalt epsilon.
+Men vi kan ikke bruk operatoren ==, fordi den kan føre til avrundingsfeil i som kan føre til at tall som ligger nær hverandre, blir vurdert som ulike. Så 12.199999 == 12.2 blir vurdert som «false».
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				Replace this with you answer
+				Sammenligningsoperatorer kan sjekke hvis et tilstand er "true" eller "false", og vi kan sjekke dette med:"<, >, <=, >=, == og !=".
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				Replace this with you answer
+				Math.random() kan bli brukt til å gjenere et tilfeldig tall, uten redigering den blir mellom 0 og 1, men vi kan skrive "(Math.random() * 10) + 1" til å få et tall mellom 1 og 10. Og vi kan bruke den til å få et tilfeddig number, navn, element, eller det kan også bli bruukt til styling, visuelle effekter og testdata.
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				Replace this with you answer
+				Modulo-operatoren (%) finner resten som blir igjen etter at vi deler ett tall på et annet. Den funker av å  ta imot to tall: en dividend (på venstre side) og en divisor (på høyre side). Den gir deg resten etter divisjonen. Eksempel: 5 % 2 = 1, fordi 2 går opp i 5 to ganger (2 × 2 = 4), med 1 til overs. Eksempel: 9 % 3 = 0, fordi 3 går nøyaktig opp i 9 uten rest.
 			</p>
     </ol>
 		<script type="module" src="./task_2-2.mjs" defer></script>
