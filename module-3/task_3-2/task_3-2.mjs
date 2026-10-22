@@ -159,24 +159,5 @@ const countString = "" + c1 + c2 + c3 + c4 + c5 + c6;
 
 printOut(`The magic pattern string is: ${countString}`);
 
-let points = 0;
-let patternMatched = "No special pattern matched.";
-
-if (countOfOnes === 6) {
-    patternMatched = "Full Straight";
-    points = 1500; // Example score value
-} else if (countOfSixes === 1) {
-    patternMatched = "Yahtzee";
-    points = 1000; 
-} else if (countOfTwos === 3) {
-    patternMatched = "Three Pairs";
-    points = 600; 
-} else if (countOfFours === 1 && countOfTwos === 1) {
-    patternMatched = "Tower";
-    points = 800; 
-}
-
-printOut(`Result: ${patternMatched}`);
-printOut(`Total Points: ${points}`);
 
 printOut(newLine);
