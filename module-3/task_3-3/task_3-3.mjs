@@ -3,6 +3,19 @@ import { printOut, newLine } from "../../common/script/utils.mjs";
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+function printNorwegianDate() {
+    const today = new Date();
+    
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+    
+    console.log(today.toLocaleDateString('no-NB', options));
+}
+printNorwegianDate();
 
 printOut(newLine);
 

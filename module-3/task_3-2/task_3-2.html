@@ -10,8 +10,23 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[1. In part 1, is it possible to solve the problem using a single "for" loop?]</li>
+      <p>[Yes, at least my code has it]</p>
+       <li>[2. In part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop?
+Describe what would or would not be necessary to achieve this. Provide a thorough explanation of
+your answer.]</li>
+      <p>[Yes, its possible to create an infinite lopp within a while loop, the current code does not turn into an infinite loop, because it eventually becomes false when it hits the selected random number. One way to create an infinite loop is by using something called Boolean true, which i dont know much about, the second way is to create a condition that can never be met, like using a number bigger than the guessing counter, which in this example would be anything bigger than 60.]</p>
+
+       <li>[3. Discuss briefly how quickly or slowly a computer might be able to compute this, considering the
+number of guesses and the time it takes. How does the program behave while it is guessing? Can
+the program perform other tasks concurrently?]</li>
+      <p>[Since its an infinite loop, the computer will attempt to compute it forever into infinity, however, most pcs or in our case sites, will eventually crash, but in that time it can guess millions to billions of times.While attempting to guess, the program will be in complte silence, menwahile the computer CPU will hit 100% which can cause a crash, also the program will be completely unresponsive. No, specially Javascript since its a single-threaded programming language, usually that means that the program reads one line at time, but in our case, it will read the same line infinitely since its a loop..]</p>
+
+       <li>[4. Explain the relationship between rows and columns in nested "for" loops. Can we, for instance,
+change the order, considering rows to be innermost or columns to be innermost, or does this not
+matter]</li>
+      <p>[The relationship between rows and columns in for loops is determined by how we choose to map our loop variables. By default the computer does notknow what a row and a column is, it only executes the loops in the order that we wrote down. But yes, we can change he order, but it alters how the program reads the data, prints it out and performs. Changing the columns to the outside, causes the program to visit the same column across all rows, before going to the next and doing the same.]</p>
+
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
