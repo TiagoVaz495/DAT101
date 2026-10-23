@@ -122,7 +122,13 @@ printOut("--- Part 6 -----------------------------------------------------------
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
+let throwCount = 0;
+let hasStraight = false;
+let hasTower = false;
+let has3Pairs = false;
+let hasYatzy = false;
 
+do{
 const d1 = Math.floor(Math.random() * 6) + 1;
 const d2 = Math.floor(Math.random() * 6) + 1;
 const d3 = Math.floor(Math.random() * 6) + 1;
@@ -131,8 +137,7 @@ const d5 = Math.floor(Math.random() * 6) + 1;
 const d6 = Math.floor(Math.random() * 6) + 1;
 
 const diceThrow = `${d1}${d2}${d3}${d4}${d5}${d6}`;
-
-printOut(`The dice throw is equal to: ${diceThrow}`);
+throwCount++;
 
 let c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
 for (let i = 0; i < 6; i++) {
@@ -151,13 +156,70 @@ for (let i = 0; i < 6; i++) {
         c6++;
     }
 }
-const diceCount = `${c1}${c2}${c3}${c4}${c5}${c6}`
 
-printOut(`The dice count is: ${diceCount}`);
+const diceCount = `${c1}${c2}${c3}${c4}${c5}${c6}`;
 
-const countString = "" + c1 + c2 + c3 + c4 + c5 + c6;
+let a1 = 0, a2 = 0, a3 = 0, a4 = 0, a5 = 0, a6 = 0;
+for (let i = 0; i < 6; i++) {
+    const c = diceCount.charAt(i);
+    if (c === "1") {
+        a1++;
+    } else if (c === "2") {
+        a2++;
+    } else if (c === "3") {
+        a3++;
+    } else if (c === "4") {
+        a4++;
+    } else if (c === "5") {
+        a5++;
+    } else if (c === "6"){
+        a6++;
+    }
+}
 
-printOut(`The magic pattern string is: ${countString}`);
+const amount = `${a1}${a2}${a3}${a4}${a5}${a6}`;
 
+if(amount.includes("6") === true ){
+    if (hasStraight === false){
+        hasStraight = true;
+         printOut("--- You got a Straight! ---");
+        printOut(`The dice throw is equal to: ${diceThrow}`);
+        printOut(`The dice count is: ${diceCount}`);
+        printOut(`The amount of pairs is: ${amount}`);
+        printOut(`The dice was thrown ${throwCount} times`);
+        printOut("----------------------------");
 
+    }
+} else if (amount === "010100"){
+    if(hasTower === false){
+        hasTower = true;
+        printOut("--- You got a Tower! ---");
+        printOut(`The dice throw is equal to: ${diceThrow}`);
+        printOut(`The dice count is: ${diceCount}`);
+        printOut(`The amount of pairs is: ${amount}`);
+        printOut(`The dice was thrown ${throwCount} times`);
+        printOut("------------------------")
+    }
+} else if (amount === "030000"){
+    if(has3Pairs === false){
+        has3Pairs = true;
+        printOut("--- You got 3 Pairs! ---");
+        printOut(`The dice throw is equal to: ${diceThrow}`);
+        printOut(`The dice count is: ${diceCount}`);
+        printOut(`The amount of pairs is: ${amount}`);
+        printOut(`The dice was thrown ${throwCount} times`);
+        printOut("------------------------") 
+    }
+} else if (amount === "000001" ){
+    if(hasYatzy === false){
+        hasYatzy = true;
+        printOut("--- You got a Yatzy! ---");
+        printOut(`The dice throw is equal to: ${diceThrow}`);
+        printOut(`The dice count is: ${diceCount}`);
+        printOut(`The amount of pairs is: ${amount}`);
+        printOut(`The dice was thrown ${throwCount} times`);
+        printOut("------------------------") 
+    }
+}
+} while(hasStraight === false || hasTower === false || has3Pairs === false || hasYatzy === false);
 printOut(newLine);
